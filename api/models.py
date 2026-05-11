@@ -16,7 +16,7 @@ class Product(models.Model):
     def in_stock(self):
         return self.stock > 0
     
-    def _str_(self):
+    def __str__(self):
         return self.name 
     
 class Order(models.Model):
