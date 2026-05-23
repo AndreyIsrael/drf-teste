@@ -2,9 +2,28 @@ GET http://localhost:8000/products/ HTTP/1.1
 
 ###
 
-POST http://localhost:8000/products/ HTTP/1.1
+GET http://localhost:8000/products/1/ HTTP/1.1
+
+###
+
+DELETE http://localhost:8000/products/1/ HTTP/1.1
+
+###
+PUT http://localhost:8000/products/3/ HTTP/1.1
 Content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NTE1MjU3LCJpYXQiOjE3Nzk1MTQ5NTcsImp0aSI6IjhkOGMxNDhiZjJmMzQ3ODc5MGUxYmVkODQzZWM2NWU4IiwidXNlcl9pZCI6IjMifQ.pyCWJ9nKfOoyPHKKj-GrZ07Woz-cBnDYm8fW1uBhNGU
+
+{
+    "name": "Television",
+    "price": 300.00,
+    "stock": 14,
+    "description": "An amazing"
+}
+
+###
+
+POST http://localhost:8000/products/1/ HTTP/1.1
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NTIwNDI3LCJpYXQiOjE3Nzk1MjAxMjcsImp0aSI6ImRiNmQ0OWI0NjAzNjRjYjM4ZjQ2YTcyMGE4ZjNmMmY1IiwidXNlcl9pZCI6IjEifQ.VpmEG2abVezZzuQofKfh5adDRFunCvdK88v6TiILua4
 
 
 {
@@ -26,6 +45,13 @@ Content-type: application/json
 
 ###
 
-GET http://localhost:8000/user-orders/ HTTP/1.1
+#GET http://localhost:8000/user-orders/ HTTP/1.1
+#Content-type: application/json
+#Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NTE1NjkwLCJpYXQiOjE3Nzk1MTUzOTAsImp0aSI6ImQ4NTVhZWQ5ZGUxNTRjYjI5NmI3MDg2OGExNDgyNDI1IiwidXNlcl9pZCI6IjEifQ._lytJymrZs_1JvUJKRysIcOQtZ9eR-EejBq3wWCd1GE
+
+POST http://localhost:8000/api/token/refresh/ HTTP/1.1
 Content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NTE1NjkwLCJpYXQiOjE3Nzk1MTUzOTAsImp0aSI6ImQ4NTVhZWQ5ZGUxNTRjYjI5NmI3MDg2OGExNDgyNDI1IiwidXNlcl9pZCI6IjEifQ._lytJymrZs_1JvUJKRysIcOQtZ9eR-EejBq3wWCd1GE
+ 
+ {
+    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc3OTYwNDE1MCwiaWF0IjoxNzc5NTE3NzUwLCJqdGkiOiIyN2Q3NTZlOGM3ZDY0YzE0ODEzYTMxY2JkOTVhNjcxNyIsInVzZXJfaWQiOiIxIn0.2SMRmOCGc8Xjbmf883eJd7Gef9h6OsrLZLwJPBbtk6k"
+ }
