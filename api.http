@@ -58,7 +58,7 @@ Content-type: application/json
 
 ###
 GET http://localhost:8000/orders/ HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NjEyNzQ4LCJpYXQiOjE3Nzk2MTI0NDgsImp0aSI6IjZlODI4MTcwMjJlMzQwNzNiNjVlNjY1MjA4ZGMyYzAwIiwidXNlcl9pZCI6IjEifQ.fbWstMTIAwBuAEX6E5qC-UMWqTxrnylhxa76xYcT0sI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5OTU0NzQ5LCJpYXQiOjE3Nzk5NTQ0NDksImp0aSI6ImMwZTNkZTM3NmE3NjRhZjA4YWRlNzU3ZjE3MTgzNDE5IiwidXNlcl9pZCI6IjEifQ.QmYqfBn2LaLiPL4_nvpakniDvr7KwSafrMU33z_zg0U
 
 ###
 
@@ -80,3 +80,28 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiY
         }
     ]
 }
+
+###
+
+PUT http://localhost:8000/orders/f508c79c-c7f2-4006-8e06-0ebecc5eddfc/ HTTP/1.1
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5OTU1ODc1LCJpYXQiOjE3Nzk5NTU1NzUsImp0aSI6IjYyOWFiMWM4NTAyZjQwNTY5MDhkOTkwYWU1MzJiYTQ2IiwidXNlcl9pZCI6IjEifQ.c8E8vkOKnp6ki0pxy8QLaJhpKB4uikPNb1Q8v9T1u5Y
+
+{
+    "status": "Confirmed",
+    "items": [
+        {
+            "product":7,
+            "quantity":3
+        },
+        {
+            "product":3,
+            "quantity":3
+
+        }
+    ]
+}
+
+###
+DELETE http://localhost:8000/orders/f508c79c-c7f2-4006-8e06-0ebecc5eddfc/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5OTU2NDI4LCJpYXQiOjE3Nzk5NTYxMjgsImp0aSI6IjAwN2Q1MjJlZjU3MjQ1ZDQ4OWVjZGIzYzk5MmRkYjAzIiwidXNlcl9pZCI6IjEifQ.7OKy6RG9Egv5AcGBl8M31agtTRR3GZJrkDZWWjXgOLo
