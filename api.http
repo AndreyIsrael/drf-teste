@@ -45,6 +45,16 @@ Content-type: application/json
 
 ###
 
+POST http://localhost:8000/api/token/ HTTP/1.1
+Content-type: application/json
+ 
+ {
+    "username": "andrey",
+    "password": "andrey123"
+ }
+
+###
+
 #GET http://localhost:8000/user-orders/ HTTP/1.1
 #Content-type: application/json
 #Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5NTE1NjkwLCJpYXQiOjE3Nzk1MTUzOTAsImp0aSI6ImQ4NTVhZWQ5ZGUxNTRjYjI5NmI3MDg2OGExNDgyNDI1IiwidXNlcl9pZCI6IjEifQ._lytJymrZs_1JvUJKRysIcOQtZ9eR-EejBq3wWCd1GE
@@ -58,7 +68,7 @@ Content-type: application/json
 
 ###
 GET http://localhost:8000/orders/ HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5OTU0NzQ5LCJpYXQiOjE3Nzk5NTQ0NDksImp0aSI6ImMwZTNkZTM3NmE3NjRhZjA4YWRlNzU3ZjE3MTgzNDE5IiwidXNlcl9pZCI6IjEifQ.QmYqfBn2LaLiPL4_nvpakniDvr7KwSafrMU33z_zg0U
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgwMTI1NDk5LCJpYXQiOjE3ODAxMjUxOTksImp0aSI6IjBlNTM0Y2I4NGJjZjQ0Zjg4MzY4NzJiY2Y1ODlmMWVjIiwidXNlcl9pZCI6IjMifQ.8Q2XBZm7XYQ3ddPNflBYJflRE8E5k_G2cW-c2sUsvSY
 
 ###
 
@@ -104,4 +114,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiY
 
 ###
 DELETE http://localhost:8000/orders/f508c79c-c7f2-4006-8e06-0ebecc5eddfc/ HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5OTU2NDI4LCJpYXQiOjE3Nzk5NTYxMjgsImp0aSI6IjAwN2Q1MjJlZjU3MjQ1ZDQ4OWVjZGIzYzk5MmRkYjAzIiwidXNlcl9pZCI6IjEifQ.7OKy6RG9Egv5AcGBl8M31agtTRR3GZJrkDZWWjXgOLo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5OTU2NDI4LCJpYXQiOjE3Nzk5NTYxMjgsImp0aSI6IjAwN2Q1MjJlZjU3MjQ1ZDQ4OWVjZGIzYzk5MmRkYjAzIiwidXNlcl9pZCI6IjEifQ.7OKy6RG9Egv5AcGBl8M31agtTRR3GZJrkDZWWjXgOLoPOST http://localhost:8000/api/token/ HTTP/1.1
+Content-type: application/json
+ 
+ {
+    "username": "admin",
+    "password": "test"
+ }
